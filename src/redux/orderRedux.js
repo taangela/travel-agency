@@ -10,7 +10,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 export const SET_OPTION = createActionName('SET_OPTION');
 
 // action creators
-export const setOrderOption = payload => ({ payload, type: SET_OPTION });
+export const setOrderOption = payload => ({payload, type: SET_OPTION});
 
 // reducer
 export default function reducer(statePart = [], action = {}) {

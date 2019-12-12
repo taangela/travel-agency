@@ -7,7 +7,7 @@ import OrderOption from '../OrderOption/OrderOption';
 
 //import styles from './OrderForm.scss';
 
-const OrderForm = ({ tripCost,setOrderOption, ...options }) => {
+const OrderForm = ({tripCost,setOrderOption, ...options}) => {
   return (
     <Row>
       {pricing.map((option, optionId) => (
