@@ -7,16 +7,16 @@ import OrderOption from '../OrderOption/OrderOption';
 
 //import styles from './OrderForm.scss';
 
-const OrderForm = ({tripCost,setOrderOption, ...options}) => {
+const OrderForm = ({tripCost,setOrderOption, options}) => {
   return (
     <Row>
-      {pricing.map((option, optionId) => (
-        <Col md={4} key={optionId}>
-          <OrderOption {...option} currentValue={options[optionId]} setOrderOption={setOrderOption}/>
+      {pricing.map((option) => (
+        <Col md={4} key={option.id}>
+          <OrderOption {...option} currentValue={options[option.id]} setOrderOption={setOrderOption}/>
         </Col>
       ))}
       <Col xs={12}>
-        <OrderSummary tripCost={tripCost} {...options}/>
+        <OrderSummary tripCost={tripCost} options={options}/>
       </Col>
     </Row>
   );
