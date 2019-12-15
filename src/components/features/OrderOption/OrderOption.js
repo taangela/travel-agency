@@ -5,7 +5,7 @@ import OrderOptionIcons  from './OrderOptionIcons.js';
 import OrderOptionNumber  from './OrderOptionNumber';
 import OrderOptionCheckboxes  from './OrderOptionCheckboxes';
 import OrderOptionText  from './OrderOptionText';
-import OrderOptionDate  from './OrderOptiondate';
+import OrderOptionDate  from './OrderOptionDate';
 
 import PropTypes from 'prop-types';
 
