@@ -4,7 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 
 console.error = err => {
-    throw new Error(err);
-  };
+  throw new Error(err);
+};
 
 configure({ adapter: new Adapter() });
