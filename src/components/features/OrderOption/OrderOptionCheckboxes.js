@@ -33,7 +33,7 @@ OrderOptionCheckboxes.propTypes = {
   values: PropTypes.array,
   currentValue: PropTypes.array,
   setOptionValue: PropTypes.func,
-  price: PropTypes.number,
+  price: PropTypes.string,
 };
 
 export default OrderOptionCheckboxes;
