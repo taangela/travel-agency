@@ -13,12 +13,16 @@ import {calculateTotal} from '../../../utils/calculateTotal';
 
 //import styles from './OrderForm.scss';
 
-const sendOrder = (options, tripCost) => {
+
+const sendOrder = (options, tripCost, tripName, tripCountry, tripId) => {
   const totalCost = formatPrice(calculateTotal(tripCost, options));
 
   const payload = {
     ...options,
     totalCost,
+    tripName,
+    tripId,
+    tripCountry,
   };
 
   const url = settings.db.url + '/' + settings.db.endpoint.orders;
@@ -40,7 +44,7 @@ const sendOrder = (options, tripCost) => {
     });
 };
 
-const OrderForm = ({tripCost,setOrderOption, options}) => {
+const OrderForm = ({tripCost,setOrderOption, options, tripName, tripCountry, tripId}) => {
   return (
     <Row>
       {pricing.map((option) => (
@@ -51,7 +55,7 @@ const OrderForm = ({tripCost,setOrderOption, options}) => {
       <Col xs={12}>
         <OrderSummary tripCost={tripCost} options={options}/>
       </Col>
-      <Button onClick={() => sendOrder(options, tripCost)}>Order now!</Button>
+      <Button onClick={() => sendOrder(options, tripCost, tripName, tripCountry, tripId)}>Order now!</Button>
     </Row>
   );
 };
@@ -59,5 +63,8 @@ OrderForm.propTypes = {
   tripCost: PropTypes.string,
   options: PropTypes.object,
   setOrderOption: PropTypes.func,
+  tripName: PropTypes.string,
+  tripId: PropTypes.string,
+  tripCountry: PropTypes.string,
 };
 export default OrderForm;
