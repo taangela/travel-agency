@@ -122,6 +122,36 @@
       "tripId": "5cc1d1014c75f672e46ef6d7",
       "tripCountry": "Timor-Leste",
       "id": 8
+    },
+    {
+      "car-rental": "luxury",
+      "accommodation": "house",
+      "features": [
+        "security"
+      ],
+      "adults": "2",
+      "children": "1",
+      "name": "ggggg",
+      "contact": "sssss",
+      "start-date": "2020-01-31T00:04:43.000Z",
+      "tripId": "5cc1d1013091dba04d042a96",
+      "tripName": "Excellent swing in pleasant Vanuatu",
+      "totalCost": "$68,671",
+      "id": 9
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "Marta",
+      "contact": "Koperek",
+      "start-date": "",
+      "tripId": "5cc1d10130dfa407e2e54e20",
+      "tripName": "Pleasant travel in cool Turkey",
+      "totalCost": "$51,381",
+      "id": 10
     }
   ]
 }
