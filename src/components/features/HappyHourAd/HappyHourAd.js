@@ -12,20 +12,20 @@ class HappyHourAd extends React.Component {
   }
 
   getCountdownTime() {
-    const currentTime = new Date();
-    const nextNoon = new Date(Date.UTC(currentTime.getUTCFullYear(), currentTime.getUTCMonth(), currentTime.getUTCDate(), 12, 0, 0, 0));
+    const CurrentDate = new Date();
+    const nextNoon = new Date(Date.UTC(CurrentDate.getUTCFullYear(), CurrentDate.getUTCMonth(), CurrentDate.getUTCDate(), 12, 0, 0, 0));
 
-    if (currentTime.getUTCHours() >= 12) {
-      nextNoon.setUTCDate(currentTime.getUTCDate() + 1);
+    if (CurrentDate.getUTCHours() >= 12) {
+      nextNoon.setUTCDate(CurrentDate.getUTCDate() + 1);
     }
 
-    return Math.round((nextNoon.getTime() - currentTime.getTime()) / 1000);
+    return Math.round((nextNoon.getTime() - CurrentDate.getTime()) / 1000);
   }
 
   render () {
     const countdown = this.getCountdownTime();
 
-    const { title, promoDescription } = this.props;
+    const {title, promoDescription} = this.props;
     return (
       <div className={styles.component}>
         <h3 className={styles.title}>{title}</h3>
