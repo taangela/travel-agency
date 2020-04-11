@@ -8,9 +8,18 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 // action types
 export const SET_OPTION = createActionName('SET_OPTION');
+export const RESET_OPTION = createActionName('RESET_OPTION');
 
 // action creators
 export const setOrderOption = payload => ({payload, type: SET_OPTION});
+//export const resetOrderOption = payload => ({type: RESET_OPTION});
+
+
+export function resetOrderOption() {
+  return {payload: {}, type: RESET_OPTION};
+}
+
+
 
 // reducer
 export default function reducer(statePart = [], action = {}) {
@@ -21,6 +30,20 @@ export default function reducer(statePart = [], action = {}) {
         options: {
           ...statePart.options,
           ...action.payload,
+        },
+      };
+    case RESET_OPTION:
+      return {
+        ...statePart,
+        options: {
+          adults: 1,
+          children: 0,
+          carRental: '',
+          accommodation: 'hotel',
+          name: '',
+          contact: '',
+          startDate: '',
+          featuers: [],
         },
       };
     default:

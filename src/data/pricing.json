@@ -1,6 +1,6 @@
 [
   {
-    "id": "car-rental",
+    "id": "carRental",
     "name": "Car Rental",
     "type": "dropdown",
     "values": [
@@ -65,7 +65,7 @@
     "type": "text"
   },
   {
-    "id": "start-date",
+    "id": "startDate",
     "name": "Preferred trip start",
     "type": "date"
   }

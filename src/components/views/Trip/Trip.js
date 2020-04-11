@@ -14,6 +14,7 @@ import ListItem from '../../common/ListItem/ListItem';
 import styles from './Trip.scss';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 import OrderForm from '../../features/OrderForm/OrderFormContainer.js';
+//import { setOrderOption } from '../../../redux/orderRedux';
 
 const Trip = ({error, name, image, cost, days, description, country, intro, id}) => {
   if(error) return <NotFound />;
